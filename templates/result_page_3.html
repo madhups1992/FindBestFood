@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html{
+	position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+ body {
+	font-family: Arial;
+  	color: white;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+.right {
+  right: 0;
+  background-color: red;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+<div class="split left">
+  <div class="centered">
+	  <h1>{{title_1}}</h1>
+    <h2>Top Reviews</h2>
+	  <p>{%for i in range(0, 3)%}
+	<li>{{final_sample_review1[i]}}</li></p>
+	{%endfor%}
+	  <h2>Frequent words </h2>
+    <p>{%for i in range(0, len_bi_1)%}
+{{bi_word1[i]}}, </p>
+	{%endfor%}
+	<p>{%for i in range(0, len_one_1)%}
+	{{one_word1[i]}},
+	{%endfor%}
+	</p> <h2>Percentage of Positive vs Negative</h2>
+	  <p>Positive : {{pos_count1}}
+  		Negative : {{neg_count1}}</P> </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+	  <h1>{{title_2}}</h1>
+    <h2>Top Reviews </h2>
+	  <p>{%for i in range(0, 3)%}
+	<li>{{final_sample_review2[i]}}</li></p>
+	{%endfor%}
+	  <h2>Frequent words </h2>
+    <p>{%for i in range(0, len_bi_2)%}
+	{{bi_word2[i]}}, </p>
+	{%endfor%}
+	<p>{%for i in range(0, len_one_2)%}
+	{{one_word2[i]}},
+	{%endfor%}
+</p><h2>Percentage of Positive vs Negative</h2>
+	  <p>Positive : {{pos_count2}}
+  		Negative : {{neg_count2}}</P>
+  </div>
+</div>
+     
+</body>
+</html> 
