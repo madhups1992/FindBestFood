@@ -16,4 +16,4 @@ This application compares the best in the 2 hotels specified. Percentage of posi
 
 
 ## Preview Of FindBestFood
-![](HotelFinder.gif)
+![](BestFood.gif)
