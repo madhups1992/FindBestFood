@@ -14,3 +14,6 @@ This application compares the best in the 2 hotels specified. Percentage of posi
 5) Finding the most common words based on POS(Part of speach) was extremly helpful for finding the most related words.
 6) Based on top frequent words and finding which sentence has more frequent item also not a largest among all the sentences found are considered for top reviews.
 
+
+## Preview Of FindBestFood
+![](HotelFinder.gif)
